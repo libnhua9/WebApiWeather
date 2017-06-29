@@ -71,10 +71,12 @@ namespace WebApiWeather.Controllers
                            var result = client.PostAsync(url+postData, null).Result;
                             resultContent = result.Content.ReadAsStringAsync().Result;
                         }
-                            var wf = new Tb_WeatherForecast
+                        var wf = new Tb_WeatherForecast
                         {
                             Config = resultContent,
-                            Verion = +1
+                            SaveDate = DateTime.Now,
+                            City=city,
+                            Verion =1
                         };
                         db.Tb_WeatherForecast.Add(wf);
                         db.SaveChanges();
