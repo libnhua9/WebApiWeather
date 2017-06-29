@@ -19,5 +19,6 @@ namespace WebApiWeather.EF
         public Nullable<int> Verion { get; set; }
         public Nullable<System.DateTime> SaveDate { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
+        public string City { get; set; }
     }
 }

@@ -14,6 +14,7 @@
           <Property Name="Verion" Type="int" />
           <Property Name="SaveDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="DB_TestModelStoreContainer">
           <EntitySet Name="Tb_WeatherForecast" EntityType="Self.Tb_WeatherForecast" Schema="dbo" store:Type="Tables" />
@@ -31,6 +32,7 @@
           <Property Name="Verion" Type="Int32" />
           <Property Name="SaveDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DB_TestEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Tb_WeatherForecast" EntityType="Self.Tb_WeatherForecast" />
@@ -44,6 +46,7 @@
           <EntitySetMapping Name="Tb_WeatherForecast">
             <EntityTypeMapping TypeName="DB_TestModel.Tb_WeatherForecast">
               <MappingFragment StoreEntitySet="Tb_WeatherForecast">
+                <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
                 <ScalarProperty Name="SaveDate" ColumnName="SaveDate" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
