@@ -13,8 +13,8 @@ namespace WebApiWeather
         System.Threading.Timer timer;
         public CensusdemoTask()
         {
-            //3秒执行一次  
-            timer = new System.Threading.Timer(GetJDWeather, null, 0, 10000 * 1);
+            //一个小时执行一次  
+            timer = new System.Threading.Timer(GetJDWeather, null, 0, 1000 * 60 * 1);
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]

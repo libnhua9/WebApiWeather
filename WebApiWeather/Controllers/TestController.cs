@@ -46,7 +46,7 @@ namespace WebApiWeather.Controllers
                 return null;
             }
         }
-        [HttpGet]
+        [HttpPost]
         public ActionResult GetJDWeather(string city)
         {
             var resultContent = "";
